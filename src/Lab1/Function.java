@@ -24,6 +24,7 @@ public class Function {
             System.out.println("a parameter can't be less than b");
             System.out.print("Enter a = ");
             a = scanner.nextInt();
+
             System.out.print("Enter b = ");
             b = scanner.nextInt();
         }
