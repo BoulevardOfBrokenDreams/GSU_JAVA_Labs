@@ -42,4 +42,4 @@ public class Function {
             System.out.println(Math.log(-1 * u * x + 5));
         }
     }
-}
+}//bkbdfkbndfkjbn
