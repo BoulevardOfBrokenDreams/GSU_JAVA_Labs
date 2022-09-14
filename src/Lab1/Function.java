@@ -36,9 +36,9 @@ public class Function {
 
         if(x < a){
             System.out.println(Math.cos(x + Math.log(x)) + Math.pow(Math.E, x));
-        }else if(x >= a && x <= b){
+        }else if(x <= b){
             System.out.println(Math.pow(x, 3) + Math.pow(x, 2) - 15);
-        }else if(x > b){
+        }else{
             System.out.println(Math.log(-1 * u * x + 5));
         }
     }
