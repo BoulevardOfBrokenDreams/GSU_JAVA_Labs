@@ -33,7 +33,6 @@ public class Function {
             System.out.println("There is a mistake -ux + 5 can't be zero");
             return;
         }
-
         if(x < a){
             System.out.println(Math.cos(x + Math.log(x)) + Math.pow(Math.E, x));
         }else if(x <= b){
