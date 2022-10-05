@@ -33,11 +33,11 @@ public class SecondTask {
         System.out.println();
         printMatrix(newMatrix);
 
-        Vector<Integer> vectorB = new Vector<Integer>();
+        Vector<Integer> vectorB = new Vector<>();
 
-        for(int i = 0; i < newMatrix.length; i++){
-            for(int j = 0; j < newMatrix[i].length; j++){
-                vectorB.add(newMatrix[i][j]);
+        for (int[] ints : newMatrix) {
+            for (int anInt : ints) {
+                vectorB.add(anInt);
             }
         }
 
@@ -71,9 +71,9 @@ public class SecondTask {
     }
 
     public static void printMatrix(int[][] array){
-        for(int i = 0; i < array.length; i++){
-            for(int j = 0; j < array[i].length; j++){
-                System.out.print(array[i][j] + "\t");
+        for (int[] ints : array) {
+            for (int anInt : ints) {
+                System.out.print(anInt + "\t");
             }
             System.out.println();
         }
@@ -81,10 +81,10 @@ public class SecondTask {
 
     public static int findMax(int[][] array){
         var maximal = Integer.MIN_VALUE;
-        for(int i = 0; i < array.length; i++){
-            for(int j = 0; j < array[0].length; j++){
-                if(array[i][j] > maximal){
-                    maximal = array[i][j];
+        for (int[] ints : array) {
+            for (int j = 0; j < array[0].length; j++) {
+                if (ints[j] > maximal) {
+                    maximal = ints[j];
                 }
             }
         }

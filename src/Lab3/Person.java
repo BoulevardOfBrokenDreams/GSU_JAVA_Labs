@@ -5,12 +5,18 @@ import java.util.Date;
 public abstract class Person {
     private final String firstName;
     private final String lastName;
-    private Date BirthDay;
+    private Date birthday;
+
+    public Person() {
+        firstName = "";
+        lastName = "";
+        birthday = new Date();
+    }
 
     public Person(String firstName, String lastName, Date birthDay) {
         this.firstName = firstName;
         this.lastName = lastName;
-        BirthDay = birthDay;
+        birthday = birthDay;
     }
 
     public String getFirstName() {
@@ -21,12 +27,12 @@ public abstract class Person {
         return lastName;
     }
 
-    public Date getBirthDay() {
-        return BirthDay;
+    public Date getBirthday() {
+        return birthday;
     }
 
-    public void setBirthDay(Date birthDay) {
-        BirthDay = birthDay;
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
     }
 
     @Override
@@ -34,7 +40,7 @@ public abstract class Person {
         return "Person{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", BirthDay=" + BirthDay +
+                ", BirthDay=" + birthday +
                 '}';
     }
 }
