@@ -1,6 +1,9 @@
 package Lab3;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Olympiad {
     private Employee tutor;
@@ -8,6 +11,24 @@ public class Olympiad {
     private Subject subject;
     private Date eventDate;
     private int stage;
+
+    public Olympiad(){
+        this.tutor = new Employee();
+        this.eventPlace = new Institution();
+        this.subject = Subject.DEFAULT;
+        this.eventDate = new Date();
+        this.stage = 0;
+    }
+
+    public Olympiad(Scanner scanner) throws ParseException {
+        this.tutor = new Employee(scanner);
+        this.eventPlace = new Institution(scanner);
+        this.subject.setTitle(scanner);
+        System.out.println("Enter event date:");
+        this.eventDate = new SimpleDateFormat("dd.MM.yyyy").parse(scanner.nextLine());
+        System.out.println("Enter stage:");
+        this.stage = scanner.nextInt();
+    }
 
     public Olympiad(Employee tutor, Institution eventPlace, Subject subject, Date eventDate, int stage) {
         this.tutor = tutor;

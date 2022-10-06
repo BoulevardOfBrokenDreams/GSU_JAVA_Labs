@@ -2,9 +2,9 @@ package Lab3;
 
 import java.util.Date;
 
-public abstract class Person {
-    private final String firstName;
-    private final String lastName;
+public abstract class Person implements TakePartIn{
+    private String firstName;
+    private String lastName;
     private Date birthday;
 
     public Person() {
@@ -23,8 +23,16 @@ public abstract class Person {
         return firstName;
     }
 
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
     public String getLastName() {
         return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public Date getBirthday() {
@@ -34,6 +42,8 @@ public abstract class Person {
     public void setBirthday(Date birthday) {
         this.birthday = birthday;
     }
+
+    public abstract void raising();
 
     @Override
     public String toString() {

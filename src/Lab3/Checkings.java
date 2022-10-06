@@ -1,6 +1,9 @@
 package Lab3;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Checkings {
     private Institution eventPlace;
@@ -8,6 +11,25 @@ public class Checkings {
     private Employee tutor;
     private Date eventDate;
     private String remarks;
+
+    public Checkings(){
+        this.eventPlace = new Institution();
+        this.level = "";
+        this.tutor = new Employee();
+        this.eventDate = new Date();
+        this.remarks = "";
+    }
+
+    public Checkings(Scanner scanner) throws ParseException {
+        this.eventPlace = new Institution(scanner);
+        System.out.println("Enter level of event:");
+        this.level = scanner.nextLine();
+        this.tutor = new Employee(scanner);
+        System.out.println("Enter date of event in format dd.mm.yyyy");
+        this.eventDate = new SimpleDateFormat("dd.MM.yyyy").parse(scanner.nextLine());
+        System.out.println("Enter remarks:");
+        this.remarks = scanner.nextLine();
+    }
 
     public Checkings(Institution eventPlace, String level, Employee tutor, Date eventDate, String remarks) {
         this.eventPlace = eventPlace;

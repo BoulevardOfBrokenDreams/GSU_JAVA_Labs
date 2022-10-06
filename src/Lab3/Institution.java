@@ -1,5 +1,8 @@
 package Lab3;
 
+import java.text.ParseException;
+import java.util.Scanner;
+
 public class Institution {
     private District dislocation;
     private int number;
@@ -7,16 +10,41 @@ public class Institution {
     private int countOfStudents;
     private String director;
     private Employee tutor;
-    private String adress;
+    private String address;
 
-    public Institution(District dislocation, int number, TypeOfEducation typeOfEducation, int countOfStudents, String director, Employee tutor, String adress) {
+    public Institution(){
+        this.dislocation = District.DEFAULT;
+        this.number = 0;
+        this.typeOfEducation = TypeOfEducation.DEFAULT;
+        this.countOfStudents = 0;
+        this.director = "";
+        this.tutor = new Employee();
+        this.address = "";
+    }
+
+    public Institution(Scanner scanner) throws ParseException {
+        this.dislocation = District.DEFAULT;
+        this.dislocation.setTitle(scanner);
+        System.out.println("Enter number of institution: ");
+        this.number = scanner.nextInt();
+        this.typeOfEducation = TypeOfEducation.DEFAULT;
+        this.typeOfEducation.setTitle(scanner);
+        System.out.println("Enter count of students:");
+        this.countOfStudents = scanner.nextInt();
+        System.out.println("Enter name of director: ");
+        this.director = scanner.nextLine();
+        this.tutor = new Employee(scanner);
+        System.out.println("Enter the address of in");
+    }
+
+    public Institution(District dislocation, int number, TypeOfEducation typeOfEducation, int countOfStudents, String director, Employee tutor, String address) {
         this.dislocation = dislocation;
         this.number = number;
         this.typeOfEducation = typeOfEducation;
         this.countOfStudents = countOfStudents;
         this.director = director;
         this.tutor = tutor;
-        this.adress = adress;
+        this.address = address;
     }
 
     public District getDislocation() {
@@ -67,11 +95,11 @@ public class Institution {
         this.tutor = tutor;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAddress(String address) {
+        this.address = address;
     }
 }
