@@ -5,31 +5,44 @@ import java.util.Scanner;
 public class ExceptionFunction {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        int a, b, x, u;
 
-        System.out.print("Enter x = ");
-        var x = scanner.nextInt();
-        System.out.print("Enter a = ");
-        var a = scanner.nextInt();
-        System.out.print("Enter b = ");
-        var b = scanner.nextInt();
-        System.out.print("Enter u = ");
-        var u = scanner.nextInt();
+        boolean check = true;
+        while(check){
+            try{
+                System.out.print("Enter a = ");
+                a = scanner.nextInt();
+                System.out.print("Enter b = ");
+                b = scanner.nextInt();
+                if(a > b)
+                    throw new IllegalArgumentException("a parameter must be less than b");
 
-        try{
-            System.out.println(countFuntion(a, b, x, u));
-        }catch(Exception exception){
-            System.out.println(exception.getMessage());
+                System.out.print("Enter x = ");
+                x = scanner.nextInt();
+                if(x == 0)
+                    throw new IllegalArgumentException("The X parameter can't be equal zero");
+
+                System.out.print("Enter u = ");
+                u = scanner.nextInt();
+                if(-1 * u * x + 5 <= 0)
+                    throw new IllegalArgumentException("There is a mistake -ux + 5 can't be less or equal zero");
+
+                check = false;
+                System.out.println(countFuntion(a, b, x, u));
+            }
+            catch (Exception exception){
+                System.out.println(exception.getMessage());
+            }
         }
     }
-
 
     public static double countFuntion(int a, int b, int x, int u){
         if(x == 0)
             throw new IllegalArgumentException("The X parameter can't be equal zero");
         if(a > b)
-            throw new IllegalArgumentException("a parameter can't be less than b");
+            throw new IllegalArgumentException("a parameter must be less than b");
         if(-1 * u * x + 5 <= 0){
-            throw new IllegalArgumentException("There is a mistake -ux + 5 can't be zero");
+            throw new IllegalArgumentException("There is a mistake -ux + 5 can't be less or equal zero");
         }
         if(x < a){
             return Math.cos(x + Math.log(x)) + Math.pow(Math.E, x);

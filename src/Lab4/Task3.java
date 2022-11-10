@@ -1,6 +1,8 @@
 package Lab4;
 
 
+import java.util.Scanner;
+
 /*Для встречающихся в заданном тексте пар рядом расположенных символов указать,
 сколько раз встречается в тексте каждое из таких двухбуквенных сочетаний.
  an != na */
@@ -60,6 +62,8 @@ public class Task3 {
                 "and living in the beautiful hobbit-hole built by his father, which I have just described for you, " +
                 "until he had in fact apparently settled down immovably.", "it");
         System.out.println(result);
+
+        System.out.println(findPairs(new Scanner(System.in).nextLine(),new Scanner(System.in).nextLine()));
     }
 
     public static int findPairs(String text, String pair){

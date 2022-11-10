@@ -1,7 +1,6 @@
 package Lab4;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Task2 {
     public static void main(String[] args) {
@@ -45,7 +44,7 @@ public class Task2 {
         return result.toArray(String[]::new);
     }
 
-    private static boolean checkSymbol(char symbol, String symbols){
+    protected static boolean checkSymbol(char symbol, String symbols){
         for(int i = 0; i < symbols.length(); i++){
             if(symbol == symbols.charAt(i)){ return true;}
         }
