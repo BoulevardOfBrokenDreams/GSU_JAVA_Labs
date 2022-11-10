@@ -11,21 +11,22 @@ public class ExceptionFunction {
         while(check){
             try{
                 System.out.print("Enter a = ");
-                a = scanner.nextInt();
+                a = Integer.parseInt(scanner.nextLine());
                 System.out.print("Enter b = ");
-                b = scanner.nextInt();
+                b = Integer.parseInt(scanner.nextLine());
                 if(a > b)
                     throw new IllegalArgumentException("a parameter must be less than b");
 
                 System.out.print("Enter x = ");
-                x = scanner.nextInt();
+                x = Integer.parseInt(scanner.nextLine());
                 if(x == 0)
                     throw new IllegalArgumentException("The X parameter can't be equal zero");
 
                 System.out.print("Enter u = ");
-                u = scanner.nextInt();
-                if(-1 * u * x + 5 <= 0)
+                u = Integer.parseInt(scanner.nextLine());
+                if(-1 * u * x + 5 <= 0) {
                     throw new IllegalArgumentException("There is a mistake -ux + 5 can't be less or equal zero");
+                }
 
                 check = false;
                 System.out.println(countFuntion(a, b, x, u));
