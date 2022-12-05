@@ -19,18 +19,18 @@ public class Employee extends Person {
     }
 
     public Employee(Scanner scanner) throws ParseException {
-        System.out.println("Enter first name:");
-        setFirstName(scanner.nextLine());
-        System.out.println("Enter last name:");
-        setLastName(scanner.nextLine());
-        System.out.println("Enter birthday date in format dd.mm.yyyy");
-        setBirthday(new SimpleDateFormat("dd.MM.yyyy").parse(scanner.nextLine()));
-        System.out.println("Enter post:");
-        this.post = scanner.nextLine();
-        System.out.println("Enter date of employ in format dd.mm.YYYY:");
-        this.dateOfEmploy = new SimpleDateFormat("dd.MM.yyyy").parse(scanner.nextLine());
-        System.out.println("Enter date of dismiss in the same format or write NO:");
-        var check = scanner.nextLine();
+        System.out.print("Enter first name:");
+        setFirstName(scanner.next());
+        System.out.print("Enter last name:");
+        setLastName(scanner.next());
+        System.out.print("Enter birthday date in format dd.mm.yyyy");
+        setBirthday(new SimpleDateFormat("dd.MM.yyyy").parse(scanner.next()));
+        System.out.print("Enter post:");
+        this.post = scanner.next();
+        System.out.print("Enter date of employ in format dd.mm.YYYY:");
+        this.dateOfEmploy = new SimpleDateFormat("dd.MM.yyyy").parse(scanner.next());
+        System.out.print("Enter date of dismiss in the same format or write NO:");
+        var check = scanner.next();
         if(check.equals("NO")) {
             this.dateOfDismiss = new Date();
         }else{
@@ -83,5 +83,14 @@ public class Employee extends Person {
     @Override
     public void raising() {
         System.out.println("Salary was raised on " + new Random().nextInt(20, 1000) + "$");
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\n\t" + "Employee{" +
+                "post='" + post + '\'' +
+                ", dateOfEmploy=" + dateOfEmploy +
+                ", dateOfDismiss=" + dateOfDismiss +
+                '}';
     }
 }
