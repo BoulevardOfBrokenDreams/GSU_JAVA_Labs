@@ -1,5 +1,6 @@
-package Lab6.Lab6_2;
+package Lab7.FileCollection;
 import Lab3.*;
+import Lab7.Menu;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -46,12 +47,11 @@ public class CollectionController<T>{
         }
     }
 
-    public void deleteElement(Scanner scanner){
-        System.out.print("Enter index of element: ");
+    public void deleteElement(int index){
+
         var collection = tCollection.getCollection();
 
         try{
-            var index = Integer.parseInt(scanner.next());
             if(index < 0 || index >= collection.length) {
                 throw new ArrayIndexOutOfBoundsException("Entered incorrect index");
             }
@@ -66,28 +66,14 @@ public class CollectionController<T>{
         }
     }
 
-    public void updateElement(Scanner scanner){
-        System.out.println("Enter index of element: ");
+    public String updateElement(T item, int index){
         var collection = tCollection.getCollection();
-
         try{
-            int index = Integer.parseInt(scanner.next());
-            if(index < 0 || index >= collection.length) {
-                throw new ArrayIndexOutOfBoundsException("Entered incorrect index");
-            }
-
-            collection[index] = (T)switch (getType(collection[index])){
-                case "Employee" -> new Employee(scanner);
-                case "Checkings" -> new Checkings(scanner);
-                case "Healthing" -> new Healthing(scanner);
-                case "Institution" -> new Institution(scanner);
-                case "Olympiad" -> new Olympiad(scanner);
-                case "Student" -> new Student(scanner);
-                default -> null;
-            };
+            collection[index] = item;
         } catch (Exception exception){
-            System.out.println(exception.getMessage());
+            return exception.getMessage();
         }
+        return "1";
     }
 
     public void updateViews(){

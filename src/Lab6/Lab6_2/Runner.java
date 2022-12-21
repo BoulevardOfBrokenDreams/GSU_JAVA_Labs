@@ -12,8 +12,8 @@ public class Runner {
 
         var collectionController = new CollectionController<>(new Collection<>(new Employee[3]), new CollectionView<>());
         Scanner scanner = new Scanner(System.in);
-        var menuPosition = menu(mainMenu, scanner);
 
+        var menuPosition = menu(mainMenu, scanner);
         while(menuPosition != mainMenu.length - 1){
             try{
                 switch (menuPosition){

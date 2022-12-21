@@ -1,4 +1,4 @@
-package Lab6.Lab6_2;
+package Lab7.FileCollection;
 
 public class CollectionView<T> {
 

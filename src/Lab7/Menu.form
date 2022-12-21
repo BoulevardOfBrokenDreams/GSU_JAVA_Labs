@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Lab7.Menu">
+  <grid id="27dc6" binding="mainWindow" layout-manager="GridLayoutManager" row-count="12" column-count="8" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="866" height="543"/>
+    </constraints>
+    <properties>
+      <font name="Courier New" size="12"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="af1d5" class="javax.swing.JButton" binding="PrintToFIleButton" default-binding="true">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="165" height="30"/>
+            <preferred-size width="165" height="30"/>
+            <maximum-size width="165" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Courier New" size="12"/>
+          <text value="PrintToFIle"/>
+        </properties>
+      </component>
+      <component id="58913" class="javax.swing.JButton" binding="UpdateElementButton">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="165" height="30"/>
+            <preferred-size width="165" height="30"/>
+            <maximum-size width="165" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Courier New" size="12"/>
+          <text value="Update Element"/>
+        </properties>
+      </component>
+      <component id="42d0c" class="javax.swing.JButton" binding="AddElementButton">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="165" height="30"/>
+            <preferred-size width="165" height="30"/>
+            <maximum-size width="165" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Courier New" size="12"/>
+          <text value="Add element"/>
+        </properties>
+      </component>
+      <component id="5ad03" class="javax.swing.JLabel" binding="FirstNameLabel">
+        <constraints>
+          <grid row="2" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Courier New" size="12"/>
+          <text value="Имя"/>
+        </properties>
+      </component>
+      <component id="7f549" class="javax.swing.JLabel" binding="LastNameLabel">
+        <constraints>
+          <grid row="3" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Courier New" size="12"/>
+          <text value="Фамилия"/>
+        </properties>
+      </component>
+      <component id="8ff29" class="javax.swing.JButton" binding="ReadFromFileButton">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="165" height="30"/>
+            <preferred-size width="165" height="30"/>
+            <maximum-size width="165" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Courier New" size="12"/>
+          <text value="Read from File"/>
+        </properties>
+      </component>
+      <component id="6275" class="javax.swing.JLabel" binding="BirthDayLabel">
+        <constraints>
+          <grid row="4" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Courier New" size="12"/>
+          <text value="День рождения"/>
+        </properties>
+      </component>
+      <component id="10949" class="javax.swing.JLabel" binding="PostLabel">
+        <constraints>
+          <grid row="5" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Courier New" size="12"/>
+          <text value="Должность"/>
+        </properties>
+      </component>
+      <component id="4547a" class="javax.swing.JLabel" binding="DateOfEmployLabel">
+        <constraints>
+          <grid row="6" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Courier New" size="12"/>
+          <text value="Дата найма"/>
+        </properties>
+      </component>
+      <component id="1887" class="javax.swing.JLabel" binding="DismissDateLabel">
+        <constraints>
+          <grid row="8" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Courier New" size="12"/>
+          <text value="Дата Увольнения"/>
+        </properties>
+      </component>
+      <component id="bc5a8" class="javax.swing.JTextArea" binding="LastNameTA">
+        <constraints>
+          <grid row="3" column="5" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="330" height="15"/>
+            <preferred-size width="330" height="15"/>
+            <maximum-size width="330" height="15"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="false"/>
+          <font name="Courier New" size="12"/>
+        </properties>
+      </component>
+      <component id="2a9d1" class="javax.swing.JTextArea" binding="BirthdayTA">
+        <constraints>
+          <grid row="4" column="5" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="330" height="15"/>
+            <preferred-size width="330" height="15"/>
+            <maximum-size width="330" height="15"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="false"/>
+          <font name="Courier New" size="12"/>
+        </properties>
+      </component>
+      <component id="abeb9" class="javax.swing.JTextArea" binding="PostTA">
+        <constraints>
+          <grid row="5" column="5" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="330" height="15"/>
+            <preferred-size width="330" height="15"/>
+            <maximum-size width="330" height="15"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="false"/>
+          <font name="Courier New" size="12"/>
+        </properties>
+      </component>
+      <component id="66875" class="javax.swing.JTextArea" binding="EmployDateTA">
+        <constraints>
+          <grid row="6" column="5" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="330" height="15"/>
+            <preferred-size width="330" height="15"/>
+            <maximum-size width="330" height="15"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="false"/>
+          <font name="Courier New" size="12"/>
+        </properties>
+      </component>
+      <component id="6a56a" class="javax.swing.JTextArea" binding="DismissDateTA">
+        <constraints>
+          <grid row="8" column="5" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="330" height="15"/>
+            <preferred-size width="330" height="15"/>
+            <maximum-size width="330" height="15"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="false"/>
+          <font name="Courier New" size="12"/>
+        </properties>
+      </component>
+      <component id="fb1fd" class="javax.swing.JButton" binding="DeleteElementButton">
+        <constraints>
+          <grid row="8" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="165" height="30"/>
+            <preferred-size width="165" height="30"/>
+            <maximum-size width="165" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Courier New" size="12"/>
+          <text value="Dlete Element"/>
+        </properties>
+      </component>
+      <component id="be167" class="javax.swing.JButton" binding="NextButton">
+        <constraints>
+          <grid row="9" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="165" height="30"/>
+            <preferred-size width="165" height="29"/>
+            <maximum-size width="165" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="&gt;&gt;"/>
+        </properties>
+      </component>
+      <component id="dd1a6" class="javax.swing.JButton" binding="PreviousButton">
+        <constraints>
+          <grid row="9" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="165" height="30"/>
+            <preferred-size width="165" height="29"/>
+            <maximum-size width="165" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="&lt;&lt;"/>
+        </properties>
+      </component>
+      <component id="ad0ac" class="javax.swing.JLabel" binding="IndexNumberL">
+        <constraints>
+          <grid row="9" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="42" height="29"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Courier New" size="12"/>
+          <text value="Индекс"/>
+        </properties>
+      </component>
+      <component id="c72f2" class="javax.swing.JButton" binding="CreateFileButton">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="165" height="30"/>
+            <preferred-size width="165" height="30"/>
+            <maximum-size width="165" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Courier New" size="12"/>
+          <text value="Create file"/>
+        </properties>
+      </component>
+      <component id="bda8e" class="javax.swing.JTextField" binding="FileNameTF">
+        <constraints>
+          <grid row="1" column="3" row-span="1" col-span="4" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="41f4" class="javax.swing.JLabel" binding="DialogLabel">
+        <constraints>
+          <grid row="10" column="1" row-span="1" col-span="6" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="DialogInput" size="10"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="a0097" class="javax.swing.JButton" binding="OnAddElementButton">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="165" height="30"/>
+            <preferred-size width="165" height="30"/>
+            <maximum-size width="165" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="OK"/>
+        </properties>
+      </component>
+      <component id="2c2fd" class="javax.swing.JTextArea" binding="FirstNameTA">
+        <constraints>
+          <grid row="2" column="5" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="330" height="15"/>
+            <preferred-size width="330" height="15"/>
+            <maximum-size width="330" height="15"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="false"/>
+          <font name="Courier New" size="12"/>
+        </properties>
+      </component>
+      <component id="d4453" class="javax.swing.JButton" binding="UpdateOkButton">
+        <constraints>
+          <grid row="7" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="165" height="30"/>
+            <preferred-size width="165" height="30"/>
+            <maximum-size width="165" height="30"/>
+          </grid>
+        </constraints>
+        <properties>
+          <enabled value="true"/>
+          <text value="OK"/>
+        </properties>
+      </component>
+      <component id="ccf14" class="javax.swing.JLabel" binding="IndexLabelInt">
+        <constraints>
+          <grid row="9" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="42" height="29"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Courier New" size="12"/>
+          <text value=""/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

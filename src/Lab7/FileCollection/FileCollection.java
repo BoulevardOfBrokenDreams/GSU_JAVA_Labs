@@ -1,13 +1,9 @@
-package Lab6.Lab6_3;
+package Lab7.FileCollection;
 
 import Lab3.Employee;
-import Lab6.Lab6_2.Collection;
-import Lab6.Lab6_2.CollectionController;
-import Lab6.Lab6_2.CollectionView;
 
 import java.io.*;
 import java.text.SimpleDateFormat;
-import java.util.Scanner;
 
 public class FileCollection extends CollectionController<Employee> {
 
@@ -17,34 +13,33 @@ public class FileCollection extends CollectionController<Employee> {
         return file;
     }
 
-    public void setFile(String file) {
+    public String setFile(String file) {
         this.file = file;
+        return "1";
     }
 
     public FileCollection(Collection<Employee> employeeCollection, CollectionView<Employee> employeeCollectionView) {
         super(employeeCollection, employeeCollectionView);
     }
 
-    public void createFile(Scanner scanner){
-        System.out.print("Enter filename: ");
-        String fileName = scanner.next();
+    public String createFile(String fileName){
         try{
-            File file = new File("D://Repositories//JAVA//src//Lab6//Lab6_3//" + fileName);
+            File file = new File("D://Repositories//JAVA//src//Lab7//" + fileName);
             if(!file.exists()){
                 file.createNewFile();
-                this.setFile("D://Repositories//JAVA//src//Lab6//Lab6_3//" + fileName);
-                System.out.println("File created");
+                this.setFile("D://Repositories//JAVA//src//Lab7//" + fileName);
+                return "File created";
             }else {
-                System.out.println("File is already exists");
-                setFile("D://Repositories//JAVA//src//Lab6//Lab6_3//" + fileName);
+                setFile("D://Repositories//JAVA//src//Lab7//" + fileName);
+                return "File is already exists";
             }
 
         }catch (Exception exception){
-            System.out.println(exception.getMessage());
+            return exception.getMessage();
         }
     }
 
-    public void printToFile() throws IOException {
+    public String printToFile() throws IOException {
 
         var fileWriter = new FileWriter(getFile());
 
@@ -71,13 +66,14 @@ public class FileCollection extends CollectionController<Employee> {
             }
             fileWriter.close();
         } catch (Exception exception){
-            System.out.println(exception.getMessage());
+            return exception.getMessage();
         }finally {
             fileWriter.close();
         }
+        return "1";
     }
 
-    public void readFromFile(){
+    public String readFromFile(){
         try{
             var reader = new BufferedReader(new FileReader(this.getFile()));
 
@@ -92,8 +88,8 @@ public class FileCollection extends CollectionController<Employee> {
                 this.addElement(new Employee(firstName,lastName, birthday, post, employDate, dismissDate));
             }
         }catch (Exception exception){
-            System.out.println(exception.getMessage());
+            return exception.getMessage();
         }
-
+        return "1";
     }
 }
